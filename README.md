@@ -50,6 +50,99 @@
 def connect_db():
     return mysql.connector.connect(
         host="134.209.101.105",
+
+🧩 Main Functions
+Insert Movie
+
+เพิ่มข้อมูลภาพยนตร์ลงในตาราง Movie
+
+MovieID
+
+MovieName
+
+MovieGenre
+
+MovieLength
+
+Insert Customer
+
+เพิ่มข้อมูลลูกค้าลงในตาราง Customer
+
+CustomerID
+
+Name
+
+SeatNumber
+
+Show Movies
+
+แสดงรายการภาพยนตร์ทั้งหมดจากตาราง Movie
+
+Show Bookings (SELECT + JOIN)
+
+แสดงข้อมูลการจองโดยใช้คำสั่ง JOIN ระหว่างหลายตาราง
+
+Booking
+JOIN Ticket
+JOIN Cinema
+JOIN Movie
+
+
+ข้อมูลที่แสดง:
+
+BookingID
+
+TicketID
+
+CinemaID
+
+MovieName
+
+Delete Booking
+
+ลบข้อมูลการจองจากตาราง Booking
+โดยมีการตรวจสอบก่อนว่าข้อมูลมีอยู่จริงหรือไม่
+
+Delete Movie
+
+ลบข้อมูลภาพยนตร์จากตาราง Movie
+มีการตรวจสอบ MovieID ก่อนทำการลบ
+
+▶ How to Run
+
+ติดตั้ง dependencies
+
+pip install mysql-connector-python
+
+
+รันโปรแกรม
+
+python main.py
+
+
+เลือกเมนูที่ต้องการจาก Command Line
+
+📋 Example Menu
+--- Movie Booking System ---
+1. Insert a New Movie
+2. Insert a New Customer
+3. Show Movies
+4. Show Bookings
+5. Delete Booking
+6. Delete Movie
+7. Exit
+
+✅ Project Requirements Coverage
+
+✔ ใช้ SELECT JOIN ระหว่างหลาย entity
+
+✔ เพิ่มข้อมูลได้มากกว่า 2 entity
+
+✔ ลบข้อมูลโดยมีการตรวจสอบก่อนลบ
+
+✔ เชื่อมต่อฐานข้อมูล MySQL
+
+✔ ระบบเป็น Text-based
         user="group32",
         password="password32",
         database="db_group32"
