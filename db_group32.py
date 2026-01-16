@@ -1,12 +1,17 @@
 import mysql.connector
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def connect_db():
     return mysql.connector.connect(
-        host="134.209.101.105",
-        user="group32",
-        password="password32",
-        database="db_group32"
+        host=os.getenv("DB_HOST"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        database=os.getenv("DB_NAME")
     )
+
 def insert_movie():
     db = connect_db()
     cursor = db.cursor()
@@ -176,4 +181,5 @@ if __name__ == "__main__":
             print("Exiting... Goodbye!")
             break
         else:
+
             print("Invalid choice. Please try again.")
